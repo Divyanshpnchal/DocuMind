@@ -3,7 +3,7 @@
 Upload a PDF, DOCX or TXT file, ask questions in plain English, and get answers that come
 **only from your document**, with the page numbers and exact excerpts used.
 
-## 1. What is RAG? (say this in your viva)
+## 1. What is RAG? 
 
 **RAG = Retrieval-Augmented Generation.** A plain LLM answers from what it memorised during
 training, so it can be wrong or make things up about *your* file. RAG fixes this in two steps:
