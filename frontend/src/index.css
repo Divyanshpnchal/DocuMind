@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/*
+  Design tokens (Tailwind v4 turns each --color-* into classes such as bg-paper, text-ink).
+  Idea: a reading desk. Cool grey-blue page, deep teal as the one brand colour,
+  and a yellow "highlighter" colour used ONLY for page citations.
+  Answers are set in a serif face (like a textbook); the interface uses the system sans.
+*/
+@theme {
+  --color-paper: #eef2f5;
+  --color-ink: #17242f;
+  --color-muted: #5b6b78;
+  --color-line: #d5dde3;
+  --color-brand: #0f766e;
+  --color-brand-dark: #0b5a54;
+  --color-brand-soft: #e2f1ef;
+  --color-mark: #fde68a;
+  --color-mark-ink: #5c4400;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin { animation-duration: 3s; }
+}

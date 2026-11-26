@@ -1,0 +1,18 @@
+# Web framework
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9      # needed by FastAPI to receive file uploads
+python-dotenv>=1.0           # reads the .env file
+pydantic>=2.6
+
+# Document reading
+PyMuPDF>=1.24.3              # PDF text extraction (page by page)
+python-docx>=1.1             # DOCX text extraction
+
+# NLP / retrieval
+sentence-transformers>=3.0   # text -> embeddings (downloads PyTorch, ~1-2 GB on first install)
+faiss-cpu>=1.8               # fast similarity search over embeddings
+numpy>=1.26
+
+# LLM (Gemini)
+google-genai>=1.0
