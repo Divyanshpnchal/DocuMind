@@ -116,13 +116,6 @@ clear message in the UI.
 - Documents live in memory and are forgotten when the server restarts.
 - For DOCX, page numbers match what Word saved; a file that was never opened in Word may show Sections.
 
-## 7. Possible viva questions
-- **Why chunks, not the whole document?** Embedding models and LLM prompts work best on short passages, and we only want the relevant ones.
-- **Why overlap?** So a fact split across a chunk border is still found.
-- **What is cosine similarity?** The angle between two vectors. 1 means the same direction (same meaning).
-- **Why FAISS?** It searches thousands of vectors very fast. ChromaDB would also work and adds saving to disk.
-- **Why not just ask the LLM directly?** It does not know your file and may invent answers. RAG grounds it in your text.
-- **How do you show correct page numbers?** The page number is stored with each chunk when the file is read, and travels with it through search to the answer card.
 
 ## 8. Ideas to improve it
 Save indexes to disk with ChromaDB, add OCR (pytesseract), use chat history for follow-up questions, add a re-ranking model, stream answers token by token.
